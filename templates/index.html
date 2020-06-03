@@ -64,12 +64,7 @@ input[type="radio"]:checked+span {
 
 
     <br /> 
-    <h4>注意事项以及相关说明</h4> 
     <br /> 
-    <p><strong>1. 请不要在打开浏览器全局翻墙的情况下上传文件,这个非常重要！！</strong></p> 
-    <p><strong>2. 生成的文件链接有效期为1小时，过期就失效了，请尽快使用</strong></p> 
-    <p><strong>3. 文件上传的位置是北京阿里云的OSS，所以北京办公室的上传文件会快一些，过期的文件会自动清理</strong></p> 
-    <p><strong>4. 文件上传大小限制为5G</strong></p> 
    </div> 
   </div> 
   <script type="text/javascript">
@@ -100,7 +95,7 @@ function putdownloadstr(putstr,filename){
 	return;
 	}
 
-    OSS.urllib.request("http://192.168.1.208:5000/sts", {method: 'GET'}, (err, response) => {
+    OSS.urllib.request(window.location.href + "sts", {method: 'GET'}, (err, response) => {
       if (err) {
       return alert(err);
       }
@@ -145,7 +140,7 @@ const progress = async function (p) {
 
 	if (p==1) {
         console.log(storeAs)
-        fetch('http://192.168.1.208:5000/sign?endpoint=' + endpoint + '&bucket=' + bucket  + '&name=' + storeAs).then(res => res.text()).then(res => putdownloadstr(res,storeAs) )  
+        fetch( window.location.href + 'sign?endpoint=' + endpoint + '&bucket=' + bucket  + '&name=' + storeAs).then(res => res.text()).then(res => putdownloadstr(res,storeAs) )  
 		document.getElementById('result').removeAttribute('style');
 	}
 };
