@@ -32,6 +32,7 @@ input[type="radio"]:checked+span {
   <div class="container"> 
    <div style="margin:50px;"> 
 
+ //可以根据需要新增	   
  <label><input type="radio" name="zone" checked="checked" value="bj"/><span>北京</span></label>
     <label><input type="radio" name="zone" value="jkt"/><span>雅加达</span></label>
     <label><input type="radio" name="zone" value="sg"/><span>新加坡</span></label>
@@ -107,18 +108,21 @@ function putdownloadstr(putstr,filename){
 
 	var zone = $("input[name='zone']:checked").val();
 	
+	//这里根据选择的地区配置你上传阿里云的region已经bucket名称，参考如下：
+	/*
 	if (zone == 'bj') {
 	      endpoint='oss-cn-beijing.aliyuncs.com'
-	      bucket='bj-public-upload'
+	      bucket='需要指定的bucket'
 	}
 	else if(zone == 'jkt') {
 	      endpoint='oss-ap-southeast-5.aliyuncs.com'
-	      bucket='jkt-public-upload'
+	      bucket='需要指定的bucket'
 	}
 	else if (zone == 'sg') {
 	      endpoint='oss-ap-southeast-1.aliyuncs.com'
-	      bucket='sg-public-upload'
+	      bucket='需要指定的bucket'
 	}
+	*/
 
       console.log({'endpoint':endpoint,'bucket':bucket})
       let client = new OSS({
