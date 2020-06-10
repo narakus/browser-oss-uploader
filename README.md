@@ -1,4 +1,4 @@
-# brower-oss-uploader
+# browser-oss-uploader
 这是通过浏览器直接上传阿里云oss的工具，需要配置下bucket相应权限，已经对应role角色以及sts
 
 
