@@ -32,10 +32,10 @@ input[type="radio"]:checked+span {
   <div class="container"> 
    <div style="margin:50px;"> 
 
- //可以根据需要新增	   
- <label><input type="radio" name="zone" checked="checked" value="bj"/><span>北京</span></label>
-    <label><input type="radio" name="zone" value="jkt"/><span>雅加达</span></label>
-    <label><input type="radio" name="zone" value="sg"/><span>新加坡</span></label>
+ //根据需要新增，修改value ，    
+ <label><input type="radio" name="zone" checked="checked" value="zone1"/><span>地区一</span></label>
+    <label><input type="radio" name="zone" value="zone2"/><span>地区二</span></label>
+    <label><input type="radio" name="zone" value="zone3"/><span>地区三</span></label>
 
 	<br>
 	<br>
@@ -110,15 +110,15 @@ function putdownloadstr(putstr,filename){
 	
 	//这里根据选择的地区配置你上传阿里云的region已经bucket名称，参考如下：
 	/*
-	if (zone == 'bj') {
+	if (zone == 'zone1') {
 	      endpoint='oss-cn-beijing.aliyuncs.com'
 	      bucket='需要指定的bucket'
 	}
-	else if(zone == 'jkt') {
+	else if(zone == 'zone2') {
 	      endpoint='oss-ap-southeast-5.aliyuncs.com'
 	      bucket='需要指定的bucket'
 	}
-	else if (zone == 'sg') {
+	else if (zone == 'zone3') {
 	      endpoint='oss-ap-southeast-1.aliyuncs.com'
 	      bucket='需要指定的bucket'
 	}
